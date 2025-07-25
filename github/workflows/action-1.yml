@@ -1,0 +1,17 @@
+name: first workflow
+on: [push]  
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome message
+        run: echo "Welcome to the first workflow on push event!"
+
+      - name: list files
+        run: ls -la
+
+      - name: display current directory
+        run: pwd  
+        
+      - name: cat README
+        run: cat README.md
